@@ -1,7 +1,9 @@
 package CrackingTheCoding5th.Chap11;
 
-public class mainSortingAndSearching {
+public class MainSortingAndSearching {
 
+	//#11.1 You are given 2 sorted arrays, A and B, where A has a
+	// large enough buffer at the end to hold B. Merge them keeping sorted.
 	public static void main(String[] args){
 		int a[] = new int[6];
 		int b[] = new int[]{4,5,9};
