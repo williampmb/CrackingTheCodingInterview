@@ -28,4 +28,29 @@ public class LinkedListQt {
             p1 = p1.next;
         }
     }
+    
+    //#2.2
+    public static Node findKthToLast(Node head, int k){
+        Node current = head;
+        Node ref = head.next;
+        int steps =1;
+        if(k<0) return null;
+        if(current == null) return null;
+        
+        while(steps < k){
+            if(ref.next == null && steps != k ){
+                System.out.println("Incompatible K and number of nodes");
+                return null;
+            }
+            ref = ref.next;
+            steps++;
+        }
+        
+        while(ref.next != null){
+            ref = ref.next;
+            current = current.next;
+        }
+        
+        return current;
+    }
 }

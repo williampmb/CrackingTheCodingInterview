@@ -11,9 +11,14 @@ package CrackingTheCoding5th.Chap1;
  */
 public class MainChap1 {
     //Chapter 1 - The Cracking the Coding Interview Book 5th Ed.
-  /*  public static void main(String[] args){
+    public static void main(String[] args){
         
-        String str = "abdc@";
-        System.out.println(StringQt.hasUniqueChar(str));
-    }*/
+//        String str = "abdc@";
+//        System.out.println(StringQt.hasUniqueChar(str));
+        boolean permutation = StringQt.permutation("asbBAa ", "saAabb ");
+        System.out.println(permutation);
+        
+    }
+    
+    
 }

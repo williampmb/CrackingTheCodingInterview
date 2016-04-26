@@ -5,6 +5,9 @@
  */
 package CrackingTheCoding5th.Chap1;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author William
@@ -30,6 +33,39 @@ public class StringQt{
                 db = db | marker; //set 1 in database at the position that correspond the letter
             }
         }
+        return true;
+    }
+    
+    //#1.3
+    public static boolean permutation(String str1, String str2){
+        Map<Integer,Integer> str1Map = new HashMap();
+        Map<Integer,Integer> str2Map = new HashMap();
+        
+        if(str1 == null || str2 == null || str1.equals("") || str2.equals("") || str1.length() != str2.length()) return false;
+        
+        
+        
+        for(int i =0; i< str1.length();i++){
+            int str1Char = str1.charAt(i);
+            int str2Char = str2.charAt(i);
+        
+            int count1 = str1Map.get(str1Char) == null ? 0 : str1Map.get(str1Char) ;
+            int count2 = str2Map.get(str2Char) == null ? 0 : str2Map.get(str2Char) ;
+         
+            count1++;
+            count2++;
+            str1Map.put(str1Char, count1);
+            str2Map.put(str2Char, count2);
+        }
+        
+        for(Integer a : str1Map.keySet()){
+            int totalChar1 =  str1Map.get(a);
+            int totalChar2 =  str2Map.get(a);
+            if(totalChar1 != totalChar2){
+                return false;
+            }
+        }
+        
         return true;
     }
 }
