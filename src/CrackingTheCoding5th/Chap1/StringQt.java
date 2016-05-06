@@ -8,6 +8,8 @@ package CrackingTheCoding5th.Chap1;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 /**
  *
  * @author William
@@ -101,5 +103,12 @@ public class StringQt{
     	}
     }
     
-    
+    static void printMatrix(int[][] m){
+    	for(int row = 0; row < m.length; row++){
+    		for(int col = 0; col < m[0].length; col++){
+    			System.out.print(m[row][col]);
+    		}
+    		System.out.println("");
+    	}
+    }
 }

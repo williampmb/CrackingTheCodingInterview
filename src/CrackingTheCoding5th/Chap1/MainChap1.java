@@ -15,9 +15,13 @@ public class MainChap1 {
         
 //        String str = "abdc@";
 //        System.out.println(StringQt.hasUniqueChar(str));
-        boolean permutation = StringQt.permutation("asbBAa ", "saAabb ");
-        System.out.println(permutation);
-        
+       // boolean permutation = StringQt.permutation("asbBAa ", "saAabb ");
+        //System.out.println(permutation);
+        int[][] m = new int[][]{{1,0,3},
+        						{0,1,0},
+        						{2,2,3}};
+        StringQt.zeroColRow(m);
+        StringQt.printMatrix(m);
     }
     
     
