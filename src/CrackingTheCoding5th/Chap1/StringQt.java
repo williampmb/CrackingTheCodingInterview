@@ -68,4 +68,38 @@ public class StringQt{
         
         return true;
     }
+    
+    //#1.7 Write an algorithm such that an element in a MxN matrix is 0 its entire row and column are set to 0
+    
+    public static void zeroColRow(int m[][]){
+    	boolean[] cols = new boolean[m.length];
+    	boolean[] rows = new boolean[m[0].length];
+    	
+    	for(int row = 0; row < rows.length; row++){
+    		for(int col = 0; col < cols.length; col++){
+    			if(m[row][col]==0){
+    				cols[col] = true;
+    				rows[row] = true;
+    			}
+    		}
+    	}
+    	
+    	for(int i = 0; i < rows.length; i++){
+    		if(rows[i]){
+    			for(int j = 0; j < m[0].length; j++){
+    				m[i][j] = 0;
+    			}
+    		}
+    	}
+    	
+    	for(int i =0; i< cols.length; i++){
+    		if(cols[i]){
+    			for(int j=0; j<m.length; j++){
+    				m[j][i] = 0;
+    			}
+    		}
+    	}
+    }
+    
+    
 }
