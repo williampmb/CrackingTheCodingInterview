@@ -19,7 +19,7 @@ public class Main {
         map.put("1", "abc");
         map.put("2", "def");
         
-        printPossibilities("2112");
+        printPossibilities("212");
     
     }
     
