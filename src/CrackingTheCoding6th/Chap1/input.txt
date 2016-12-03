@@ -1,0 +1,5 @@
+abc abscd
+abc adbc
+adbc abc
+bake pake
+bape pabe
