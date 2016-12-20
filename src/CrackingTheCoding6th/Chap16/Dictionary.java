@@ -15,13 +15,12 @@ public class Dictionary {
     Dictionary[] child;
     int numLetter = 26;
 
-    public Dictionary(int d) {
-        int data = -1;
+    public Dictionary() {
         this.child = new Dictionary[numLetter];
     }
 
     public static Dictionary build(String book) {
-        Dictionary dic = new Dictionary(0);
+        Dictionary dic = new Dictionary();
         for (String word : book.split(" ")) {
             dic.add(word);
         }
@@ -42,7 +41,7 @@ public class Dictionary {
                 }
             }
             if (current.child[asc - 97] == null) {
-                current.child[asc - 97] = new Dictionary(asc);
+                current.child[asc - 97] = new Dictionary();
             }
                 current = current.child[asc - 97];
          

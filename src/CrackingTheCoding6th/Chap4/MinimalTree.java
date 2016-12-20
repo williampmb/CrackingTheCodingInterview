@@ -20,19 +20,20 @@ public class MinimalTree {
         System.out.println(height);
     }
 
+    //The array should be sorted!!
     public static BinarySearchTree minimalHeight(int[] array) {
         BinarySearchTree tree = new BinarySearchTree();
-        BinaryNode root = addSortedArrayMinimalHeight(array, 0, array.length - 1);
+        BinarySearchNode root = addSortedArrayMinimalHeight(array, 0, array.length - 1);
         tree.setRoot(root);
         return tree;
     }
 
-    private static BinaryNode addSortedArrayMinimalHeight(int[] array, int start, int end) {
+    private static BinarySearchNode addSortedArrayMinimalHeight(int[] array, int start, int end) {
         if (start > end || end > array.length - 1) {
             return null;
         }
         int mid = (start + end) / 2;
-        BinaryNode root = new BinaryNode(array[mid]);
+        BinarySearchNode root = new BinarySearchNode(array[mid]);
         if (start != end) {
             root.setRight(addSortedArrayMinimalHeight(array, mid + 1, end));
             root.setLeft(addSortedArrayMinimalHeight(array, start, mid - 1));

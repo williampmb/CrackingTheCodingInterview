@@ -21,22 +21,22 @@ package datastructures;
  */
 public class BinarySearchTree {
 
-    private BinaryNode root;
+    private BinarySearchNode root;
 
     public BinarySearchTree() {
 
     }
 
-    public BinaryNode getRoot() {
+    public BinarySearchNode getRoot() {
         return root;
     }
 
-    public void setRoot(BinaryNode root) {
+    public void setRoot(BinarySearchNode root) {
         this.root = root;
     }
 
     public BinarySearchTree(int data) {
-        root = new BinaryNode(data);
+        root = new BinarySearchNode(data);
     }
 
     public int height() {
@@ -53,7 +53,7 @@ public class BinarySearchTree {
     public boolean insert(int value) {
         boolean success = false;
         if (root == null) {
-            root = new BinaryNode(value);
+            root = new BinarySearchNode(value);
             success = true;
         } else{
             root.insert(value);
@@ -61,8 +61,8 @@ public class BinarySearchTree {
         return success;
     }
 
-    public BinaryNode search(int value) {
-        BinaryNode found = null;
+    public BinarySearchNode search(int value) {
+        BinarySearchNode found = null;
         if (root != null) {
             found = root.search(value);
         }
@@ -80,7 +80,7 @@ public class BinarySearchTree {
                 } else if (root.getLeft() == null) {
                     root = root.getRight();
                 } else {
-                    BinaryNode so = smallAtRight(root.right);
+                    BinarySearchNode so = smallAtRight(root.right);
                     copyNode(so, root);
                     root.right.delete(so.getData());
                 }
@@ -98,15 +98,15 @@ public class BinarySearchTree {
         return success;
     }
 
-    private BinaryNode smallAtRight(BinaryNode so) {
-        BinaryNode smallOne = so;
+    private BinarySearchNode smallAtRight(BinarySearchNode so) {
+        BinarySearchNode smallOne = so;
         while (smallOne.left != null) {
             smallOne = smallOne.left;
         }
         return smallOne;
     }
 
-    private void copyNode(BinaryNode from, BinaryNode to) {
+    private void copyNode(BinarySearchNode from, BinarySearchNode to) {
         to.setData(from.getData());
     }
 }

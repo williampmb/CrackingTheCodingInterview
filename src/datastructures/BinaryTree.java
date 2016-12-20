@@ -9,9 +9,10 @@ package datastructures;
  *
  * @author William
  */
-public class BinaryNode {
+public class BinaryTree {
 
     int data;
+    BinaryNode root;
 
     public int getData() {
         return data;
@@ -21,21 +22,11 @@ public class BinaryNode {
         this.data = data;
     }
 
-    public BinaryNode getLeft() {
-        return left;
+    public BinaryNode getRoot() {
+        return root;
     }
 
-    public void setLeft(BinaryNode left) {
-        this.left = left;
+    public void setRoot(BinaryNode root) {
+        this.root = root;
     }
-
-    public BinaryNode getRight() {
-        return right;
-    }
-
-    public void setRight(BinaryNode right) {
-        this.right = right;
-    }
-    BinaryNode left;
-    BinaryNode right;
 }
