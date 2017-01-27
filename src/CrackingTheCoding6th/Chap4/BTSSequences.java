@@ -13,10 +13,14 @@ import java.util.List;
  *
  * @author William
  */
+
+// TO FIX - Wrong implementation. It doenst give full answer
 public class BTSSequences {
 
     public static void main(String[] args) {
-        int[] a = {5,3,7,2,1,6,8};
+        System.out.println(Integer.MAX_VALUE);
+//int[] a = {5,3,7,2,1,6,8};
+        int[] a = {3,1,5,0,2,4,7};
         List<String> bSTSequences = bSTSequences(a);
         for (String w1 : bSTSequences) {
             System.out.println(w1);
