@@ -128,4 +128,18 @@ public class MyLinkedList {
         }
         System.out.println(mllPrint.toString());
     }
+    
+    public static MyLinkedList createMyLinkedList(int[] array) {
+        if (array == null || array.length == 0) {
+            return null;
+        }
+        MyLinkedList head = new MyLinkedList(array[0]);
+        MyLinkedList cur = head;
+
+        for (int i = 1; i < array.length; i++) {
+            cur.setNext(new MyLinkedList(array[i]));
+            cur = cur.getNext();
+        }
+        return head;
+    }
 }
